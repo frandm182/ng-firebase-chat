@@ -8,6 +8,6 @@ export class Message {
     constructor({ message , createAt, sender }) {
         this.message = message;
         this.createAt = createAt;
-        this.sender = this.sender;
+        this.sender = new User(sender);
     }
 }
