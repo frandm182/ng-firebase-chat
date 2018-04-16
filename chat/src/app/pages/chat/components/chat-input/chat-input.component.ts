@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatInputComponent implements OnInit {
 
+  // tslint:disable-next-line:no-inferrable-types
+  public newMessageText: string = '';
+
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  public submit(message: string): void {
+    // TODO save text to Firebase
+    console.log('New message: ', message);
+    this.newMessageText = '';
   }
 
 }
